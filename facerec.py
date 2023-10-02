@@ -20,7 +20,7 @@ import pygame
 pygame.mixer.init()
 
 # init bot telegram
-bot = telepot.Bot('1819171601:AAGmEpvCzl2EKpSEmQcteh8Xg4gdJtT09A0')
+bot = telepot.Bot('<your:telegram_bot_token>')
 
 # Initialing PiCamera
 # utility.initPiCamera()
