@@ -1,0 +1,7 @@
+face_recognition
+pickle
+opencv-python
+numpy
+telepot
+pygame
+gtts
