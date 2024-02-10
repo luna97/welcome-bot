@@ -1,7 +1,9 @@
 face_recognition
-pickle
+pickle5
 opencv-python
+opencv-contrib-python
 numpy
 telepot
 pygame
 gtts
+mediapipe
