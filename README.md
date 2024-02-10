@@ -20,7 +20,7 @@ Here is listed the project structure:
 ### Dependencies
 Install the following libraries with python:
 ```
-pip3 install numpy face_recognition opencv-python opencv-contrib-python mediapipe pickle5
+pip3 install -r requirements.txt
 ```
 It is reccomended to run it in a virtual environment.
 
