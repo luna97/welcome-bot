@@ -1,4 +1,4 @@
-# welcome-bot
+# Welcome-Bot
 This is a security camera / welcome bot that performs face recognition in real time in raspberry
 
 ## Project structure
@@ -33,8 +33,11 @@ First thing to do is to add persons to the dataset (here there will be just my f
 5. It will create a file `output.mp3`, move it in the `saluti` folder and rename it with the name of the person: `mv output.mp3 saluti/name.mp3`
 
 ### Run the system
-The only thing to do is to run the file `facerec.py` and the system will be running.
+The only thing to do is to run the file `main.py` and the system will be running.
 You can even create a system service so the code is automatically started when the machine reboots.
+
+### Telegram bot
+In order to use the telegram bot you need to create a bot and get the token.
 
 
 ## Testing and debug
