@@ -43,14 +43,14 @@ if not cap.isOpened():
     print("Cannot open camera")
     exit()
 
-encodings = dict()
-last_found = dict()
-tmp_boxes = list()
-
 # get the haar cascade classifier
 face_detection = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
 def loop():
+    encodings = dict()
+    last_found = dict()
+    tmp_boxes = list()
+    
     while True:
         # Grab a single frame of video from the Pi camera as a numpy array
         _, img = cap.read()
