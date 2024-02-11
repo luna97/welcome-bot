@@ -73,6 +73,7 @@ while True:
     
     # If any face is present perform face recognition
     if len(faces) > 0:
+
         
         # convert the original image to RGB for face recognition
         img_recognition = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -131,7 +132,7 @@ while True:
             # send a message to my bot
             if use_telegram_bot:
                 utility.notifyMe(bot, b.name, b.frame)
-            last_found[name] = datetime.datetime.now()
+            last_found[b.name] = datetime.datetime.now()
         
     tmp_boxes = [b for b in tmp_boxes if not b.isExpired()]
     
