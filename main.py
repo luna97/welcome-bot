@@ -34,7 +34,8 @@ except:
     use_telegram_bot = False
 
 # Initialing PiCamera
-# utility.initPiCamera()
+if utility.is_raspberrypi():
+    utility.initPiCamera()
 
 # Get vidoe feed from the Camera with opencv
 print("Init video capture")
@@ -63,7 +64,7 @@ while True:
         img = cv2.flip(img, 1) # flip the image if using frontal camera
     
     # Crop the image with the size i need
-    # img = img[100:-140, 160:-160, :]
+    img = img[100:-100, 160:-160, :]
     
     # Convert color space of the image to gray for detection
     img_detection = cv2.cvtColor(img, cv2.COLOR_RGBA2GRAY)

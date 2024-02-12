@@ -1,10 +1,11 @@
 import telepot
-#import picamera
+import picamera
 import pygame
 import time
 import threading
 import datetime
 from PIL import Image
+import io
 
 # Function used to notify me when the system srecognize a face
 def notifyMe(bot, name, output):
@@ -106,3 +107,11 @@ class Box:
         # update values
         self.update(bbox, time.time())
         return self.name == None
+    
+
+def is_raspberrypi():
+    try:
+        with io.open('/sys/firmware/devicetree/base/model', 'r') as m:
+            if 'raspberry pi' in m.read().lower(): return True
+    except Exception: pass
+    return False
