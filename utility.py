@@ -32,6 +32,9 @@ def saluta(name):
     
 def _saluta(name):
     print("I see someone named {}!".format(name))
+    if name == "unknown":
+        return
+    
     pygame.mixer.music.load("saluti/" + name + ".mp3")
     pygame.mixer.music.play()
     while pygame.mixer.music.get_busy() == True:
